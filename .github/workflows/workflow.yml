@@ -1,5 +1,5 @@
 env:
-  RUBY_VERSION: 3.1.2
+  RUBY_VERSION: 3.3.4
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: password
   DATABASE_USER: postgres
@@ -29,7 +29,7 @@ jobs:
         run: sudo apt-get install libpq-dev
       - name: Install dependencies
         run: |
-          gem install bundler
+          gem install bundler -v 2.7.2
           bundler install
       - name: Create database
         run: |
